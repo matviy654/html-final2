@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Market</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="overlay">
+            <div class="header">Виберіть найкращу із 500 професійних ігор</div>
+            <div class="description">Від команди <div class="description2">"Gamers Center"</div> абсолютно безкоштовно!</div>
+            <a href="https://minesweeper.one/%D1%81%D0%B0%D0%BF%D0%B5%D1%80/" class="button">Грати</a>
+
+            <div class="button-group">
+                <button class="button" id="registerButton">Зареєструватися</button>
+            </div>
+
+            <div class="registration-form" id="registrationForm">
+                <h2>Реєстрація</h2>
+                <form action="/submit-registration" method="post">
+                    <div>
+                        <label for="username">Ім'я користувача:</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div>
+                        <label for="email">Електронна пошта:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div>
+                        <label for="password">Пароль:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div>
+                        <button type="submit">Зареєструватися</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="button-container">
+            <button class="popup-button">Інше</button>
+            <div class="popup-content">
+                <p class="left">Відгуки</p>
+                <p class="center">Центр допомоги</p>
+                <p class="right">Повернення коштів</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('registerButton').addEventListener('click', function() {
+            var form = document.getElementById('registrationForm');
+            form.style.display = form.style.display === 'block' ? 'none' : 'block';
+        });
+    </script>
+</body>
+</html>
